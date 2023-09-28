@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart JS</title>
+    <link rel="stylesheet" href="ui/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
+      <div class="container">
+        <a
+          class="navbar-brand d-flex justify-content-start align-items-center column-gap-2"
+          href="javascript:void(0);"
+        >
+          <img
+            src="assets/bootstrap-logo.svg"
+            alt="Logo"
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
+          Cart JS
+        </a>
+      </div>
+    </nav>
+    <section class="pt-4">
+      <div class="container">
+        <div class="mb-4">
+          <h3 class="text-center">Flexible Benefits Solution</h3>
+          <div class="row">
+            <div class="col-sm-9">
+              <div id="productContainer"></div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card text-bg-dark mb-4">
+                <div class="card-body">
+                  <h5 class="mb-0">
+                    Wallet Allocation: <span class="walletAmount"></span>
+                  </h5>
+                </div>
+              </div>
+              <table class="table table-secondary table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>Point</th>
+                    <th>Multiplier</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                <tbody id="walletBody"></tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="2">Total</td>
+                    <td><strong class="cartTotalAmout"></strong></td>
+                  </tr>
+                </tfoot>
+              </table>
+              <table class="table">
+                <tr>
+                  <th>Wallet Amount</th>
+                  <td><span class="walletAmount"></span></td>
+                </tr>
+                <tr>
+                  <th>Used</th>
+                  <td><span class="usedAmmount"></span></td>
+                </tr>
+                <tr>
+                  <th>Available</th>
+                  <td><span class="availableAmmount"></span></td>
+                </tr>
+                <tr>
+                  <th>You Pay</th>
+                  <td><span class="payAmmount"></span></td>
+                </tr>
+              </table>
+              <button class="btn btn-primary d-block w-100" id="btn-checkout">
+                Checkout
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="invoiceContainer mb-4">
+          <h4 class="text-center">Flexible Benefits Solution - Invoice</h4>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Benefit</th>
+                <th>Description</th>
+                <th>Points</th>
+                <th>Multiplier</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody id="invoiceBody"></tbody>
+            <tfoot>
+              <tr>
+                <th></th>
+                <th>Total</th>
+                <th><span class="cartTotalPoints"></span></th>
+                <th></th>
+                <th><span class="cartTotalAmout"></span></th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="app.js"></script>
+    <script type="module" src="data.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="ui/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
